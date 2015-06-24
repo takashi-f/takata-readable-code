@@ -7,14 +7,15 @@ import java.io.IOException;
 
 public class ReadableCode {
 
+	private static final String RECIPE_FILE_PATH = "src/recipe-data.txt";
+	
 	/**
 	 * [概要]プログラムのエントリーポイント。
 	 * @param args データファイル名を指定する。
 	 * @throws IOException 
 	 */
 	public static void main(String[] args) throws IOException {
-		String recipePath = "src/recipe-data.txt";
-		PrintInRecipeBase recipePrinter = new PrintInRecipeText(recipePath);
+		PrintInRecipeBase recipePrinter = new PrintInRecipeText(RECIPE_FILE_PATH);
 		recipePrinter.PrintIn();
 	}
 }
